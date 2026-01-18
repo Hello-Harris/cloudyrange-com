@@ -1,28 +1,20 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from '../layouts/BlogPost.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<p>
-				My name is Taylor and I am a Sr. Systems Engineer specializing in Network and Datacenter Engineering at one of the largest network and server manufacturers in the world. 
-				My engineering journey is driven by a deep curiosity for how large-scale infrastructures operate, paired with a passion for hands-on experimentation in my Home Lab. 
-				Before joining the OEM world, I spent several years at a Partner evolving through various engineering roles, and I’ve had the privilege of shaping the next generation of defenders as an Adjunct Professor and Cyber Range Advisor at my alma mater.
-			</p>
+<Layout
+	title="About Me"
+	description=""
+	pubDate={new Date('January 18 2026')}
+	heroImage="/about-me-generic.jpg"
+>
+	<p>
+		My name is Taylor and I am a Sr. Systems Engineer specializing in Network and Datacenter Engineering at one of the largest network and server manufacturers in the world. 
+		My engineering journey is driven by a deep curiosity for how large-scale infrastructures operate, paired with a passion for hands-on experimentation in my Home Lab. 
+		Before joining the OEM world, I spent several years at a Partner evolving through various engineering roles, and I’ve had the privilege of shaping the next generation of defenders as an Adjunct Professor and Cyber Range Advisor at my alma mater.
+	</p>
 
-			<p>
-				Continuous learning is the backbone of engineering. If I'm not architecting at work, I'm likely breaking and fixing things in my home lab to stay at the edge of what's possible.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+	<p>
+		Continuous learning is the backbone of engineering. If I'm not architecting at work, I'm likely breaking and fixing things in my home lab to stay at the edge of what's possible.
+	</p>
+</Layout>
